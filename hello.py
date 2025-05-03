@@ -7,5 +7,7 @@ y = np.sin(x)
 plt.plot(x, y)
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
-plt.title('Hello, Python with Anaconda!')
+plt.title('Hello, Python with Anaconda! version 2')
 plt.show()
+
+
