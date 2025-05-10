@@ -11,9 +11,14 @@ def blink(led_pin, interval):
 def main():
     blink_interval = 0.5
     led = machine.Pin(0, machine.Pin.OUT)
+    blink_history = []
 
     while True:
-     blink(led, blink_interval)
+        blink(led, blink_interval)
+        blink_history.append(blink_interval)
 
+        # 5回ごとに履歴を表示
+        if len(blink_history) % 5 == 0:
+            print("履歴:", blink_history)
 if __name__ == "__main__":
     main()
